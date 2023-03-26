@@ -12,20 +12,92 @@
     --gray:   #7c6f64;
     --beige: #EBDAB4;
     --dark-black: #282828;
-
 }
 
+/* this is chris playing around with the light and dark modes 
+*  there are too many colours at the moment, we can cull anything we don't use
+* */
+.light{
+  --background: #fbf1c7;
+  --background-darker:  #ebdbb2;
+
+  --fg:  #282828;
+  --fg1: #3c3836;
+  --fg2: #504945;
+  --fg3: #665c54;
+  --fg4: #7c6f64;
+
+  --red:    #9d0006;
+  --green:  #79740e;
+  --yellow: #b57614;
+  --blue:   #076678;
+  --purple: #8f3f71;
+  --aqua:   #427b58;
+  --orange: #af3a03;
+  --gray:   #928374;
+
+  --red-dim:    #cc2412;
+  --green-dim:  #98971a;
+  --yellow-dim: #d79921;
+  --blue-dim:   #458598;
+  --purple-dim: #b16286;
+  --aqua-dim:   #689d6a;
+  --orange-dim: #d65d0e;
+  --gray-dim:   #7c6f64;
+}
+
+.dark{
+  --bg_h: #1d2021;
+  --bg:   #282828;
+  --bg_s: #32302f;
+  --bg1:  #3c3836;
+  --bg2:  #504945;
+  --bg3:  #665c54;
+  --bg4:  #7c6f64;
+
+  --fg:  #fbf1c7;
+  --fg1: #ebdbb2;
+  --fg2: #d5c4a1;
+  --fg3: #bdae93;
+  --fg4: #a89984;
+
+  --red:    #fb4934;
+  --green:  #b8bb26;
+  --yellow: #fabd2f;
+  --blue:   #83a598;
+  --purple: #d3869b;
+  --aqua:   #8ec07c;
+  --gray:   #928374;
+  --orange: #fe8019;
+
+  --red-dim:    #cc2412;
+  --green-dim:  #98971a;
+  --yellow-dim: #d79921;
+  --blue-dim:   #458588;
+  --purple-dim: #b16286;
+  --aqua-dim:   #689d6a;
+  --gray-dim:   #a89984;
+  --orange-dim: #d65d0e;
+}
 /*
 * can call colours by their variable...
 * e.g.
 * body{ background-color: var(--background)}
 */
 
-/*
-- The background color is #c3c3c3
-- All content should be centered
-- The top margin is 50px and the left and right are automatic
-*/
+/* theme toggle styling */
+
+.toggle{
+    position:relative;
+}
+
+toggle-input{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+}
+
 body {
     background-color: var(--background-darker);
     margin-top:50px;
