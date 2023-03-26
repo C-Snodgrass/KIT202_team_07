@@ -46,6 +46,29 @@ showHideBtn4.addEventListener("click", showHidePost.bind(null, showHideContent4,
 showHideBtn5.addEventListener("click", showHidePost.bind(null, showHideContent5, showHideBtn5));
 }
 
+function validateForm()
+{
+    if(document.create.title == "" || document.create.title.value.length >70)
+    {
+        alert ("Please enter a valid Title for your blog");
+        document.create.title.focus();
+        return false;
+    }
+
+    if(document.create.tags.value == "")
+    {
+        alert("Please enter a keyword or tag for your blog post");
+        document.create.tags.focus();
+        return false;
+    }
+   
+    if(document.create.blogPost.value == "")
+    {
+        alert("Please enter your blog post");
+        document.create.blodPost.focus();
+        return false;
+    }
+}
 
 
 // document.querySelector("#showHideBtn2").addEventListener("click", showHidePost);

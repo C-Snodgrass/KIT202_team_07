@@ -16,12 +16,46 @@
         <meta charset="UTF-8">
         <!-- TODO add your names -->
         <meta name="author" content="Chris Snodgrass">
+        <meta name="author" content="Fraser Miller">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
         <title>"Create"</title>
     </head>
     
     <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href = "index.html"> Home</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Archive</a>
+            <a href="create.html">Create</a>
+            <a href="index.html">Index</a>
+            <a href="login.html">login</a>
+            <a href="register.html">register</a>
+        </div> 
+        <form name="create" onsubmit="return (validateForm());" >
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td><input type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td>Tags/Keywords</td>
+                    <td><input type="text" name="tags"></td>
+                </tr>
+                <tr>
+                    <td>Blog Post</td>
+                    <td><input type="text" name="blogPost"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" onclick="(href='index.html')"/>
+                    </td>
+                    <td><input type="reset" name="reset"/></td>
+                </tr>
+
+            </table>
+        </form> 
     </body>
 
 </html>
