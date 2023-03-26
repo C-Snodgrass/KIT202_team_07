@@ -33,24 +33,27 @@
             <a href="login.html">login</a>
             <a href="register.html">register</a>
         </div> 
-        <form name="create" >
+        <form name="create" onsubmit="return (validateForm());" >
             <table>
                 <tr>
                     <td>Title</td>
-                    <td><input type="text" name="title" onsubmit="return validateTitle()" method="post"></td>
+                    <td><input type="text" name="title"></td>
                 </tr>
                 <tr>
                     <td>Tags/Keywords</td>
-                    <td><input type="email" name="tags" onsubmit="return validateTags()" method="post"></td>
+                    <td><input type="text" name="tags"></td>
+                </tr>
+                <tr>
+                    <td>Blog Post</td>
+                    <td><input type="text" name="blogPost"></td>
                 </tr>
                 <tr>
                     <td>
-                        <button>
-                            Submit
-                        </button>
+                        <input type="submit" onclick="(href='index.html')"/>
                     </td>
-
+                    <td><input type="reset" name="reset"/></td>
                 </tr>
+
             </table>
         </form> 
     </body>
