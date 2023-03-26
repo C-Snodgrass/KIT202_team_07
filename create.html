@@ -33,15 +33,15 @@
             <a href="login.html">login</a>
             <a href="register.html">register</a>
         </div> 
-        <form>
+        <form name="create" >
             <table>
                 <tr>
                     <td>Title</td>
-                    <td><input type="text" name="title" required></td>
+                    <td><input type="text" name="title" onsubmit="return validateTitle()" method="post"></td>
                 </tr>
                 <tr>
                     <td>Tags/Keywords</td>
-                    <td><input type="email" name="tags" required></td>
+                    <td><input type="email" name="tags" onsubmit="return validateTags()" method="post"></td>
                 </tr>
                 <tr>
                     <td>

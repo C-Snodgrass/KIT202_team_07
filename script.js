@@ -46,7 +46,25 @@ showHideBtn4.addEventListener("click", showHidePost.bind(null, showHideContent4,
 showHideBtn5.addEventListener("click", showHidePost.bind(null, showHideContent5, showHideBtn5));
 }
 
+function validateTitle()
+{
+    let x = document.forms["create"]["title"].value;
+    if (x == "")
+        {
+        alert("Please enter a blog post title");
+        return false;
+        }
+}
 
+function validateTags()
+{
+    let x = document.forms["create"]["tags"].value;
+    if (x == "")
+        {
+        alert("Please enter blog tags/keywords");
+        return false;
+        }
+}
 
 // document.querySelector("#showHideBtn2").addEventListener("click", showHidePost);
 // document.querySelector("#showHideBtn3)addEventListener("click", showHidePost);
