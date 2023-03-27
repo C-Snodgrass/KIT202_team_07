@@ -71,6 +71,32 @@ function validateForm()
     }
 }
 
+// Toggle light and dark themes
+const page = document.querySelector(".page");
+const toggleIcon = document.querySelector("toggle-icon");
+const toggle = document.querySelector(".toggle-input");
+
+toggle.addEventListener("change", toggleTheme);
+
+function toggleTheme() {
+
+    // check if toggle is checked if so, change the css class to dark
+    if (toggle.checked){
+        page.classList.replace('light', 'dark');
+    } else{
+        page.classList.replace('dark', 'light');
+    }
+
+    // change the image of the button
+    if (page.classList.replace('light')) {
+        toggleIcon.src = './images/svg/Moon.svg';
+        toggleIcon.alt = 'Switch to Dark Theme';
+    }else {
+        toggleIcon.src = './images/svg/Sun.svg';
+        toggleIcon.alt = 'Switch to Light Theme';
+
+    }
+}
 
 // document.querySelector("#showHideBtn2").addEventListener("click", showHidePost);
 // document.querySelector("#showHideBtn3)addEventListener("click", showHidePost);
