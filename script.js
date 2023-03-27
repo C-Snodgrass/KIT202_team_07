@@ -33,19 +33,20 @@ function showHidePost(content, button, value) {
 
 //checks that we're on archive.html, and if we are applies the following
 if (onArchive) {
-showHideContent1.hidden = true;
-showHideContent2.hidden = true;
-showHideContent3.hidden = true;
-showHideContent4.hidden = true;
-showHideContent5.hidden = true;
-
-showHideBtn1.addEventListener("click", showHidePost.bind(null, showHideContent1, showHideBtn1));
-showHideBtn2.addEventListener("click", showHidePost.bind(null, showHideContent2, showHideBtn2));
-showHideBtn3.addEventListener("click", showHidePost.bind(null, showHideContent3, showHideBtn3));
-showHideBtn4.addEventListener("click", showHidePost.bind(null, showHideContent4, showHideBtn4));
-showHideBtn5.addEventListener("click", showHidePost.bind(null, showHideContent5, showHideBtn5));
+    showHideContent1.hidden = true;
+    showHideContent2.hidden = true;
+    showHideContent3.hidden = true;
+    showHideContent4.hidden = true;
+    showHideContent5.hidden = true;
+    
+    showHideBtn1.addEventListener("click", showHidePost.bind(null, showHideContent1, showHideBtn1));
+    showHideBtn2.addEventListener("click", showHidePost.bind(null, showHideContent2, showHideBtn2));
+    showHideBtn3.addEventListener("click", showHidePost.bind(null, showHideContent3, showHideBtn3));
+    showHideBtn4.addEventListener("click", showHidePost.bind(null, showHideContent4, showHideBtn4));
+    showHideBtn5.addEventListener("click", showHidePost.bind(null, showHideContent5, showHideBtn5));
 }
 
+// form validation for create page
 function validateForm()
 {
     if(document.create.title == "" || document.create.title.value.length >70)

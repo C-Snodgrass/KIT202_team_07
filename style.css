@@ -181,7 +181,8 @@ A rule for the heading element within the header.
     display:flex;
     justify-content:center;
     background-color: #333;
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
     width: 100%;
     overflow: hidden;
