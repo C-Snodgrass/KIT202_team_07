@@ -125,6 +125,7 @@ A 'wrapper' for all content
     max-width:800px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     color: var(--gray);
 }
 
@@ -176,7 +177,7 @@ A rule for the heading element within the header.
     text-transform:uppercase;
 }
 
-/* Add a black background color to the top navigation */
+/* top navagation styling */
 .topnav {
     display:flex;
     justify-content:center;
