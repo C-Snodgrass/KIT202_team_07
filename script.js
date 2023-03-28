@@ -70,31 +70,25 @@ function validateForm()
         return false;
     }
 }
+//<img src="./images/svg/Moon.svg" alt="Dark mode" class="toggle-icon">
 
-// Toggle light and dark themes
-const page = document.querySelector(".page");
-const toggleIcon = document.querySelector("toggle-icon");
+const body= document.querySelector("body");
 const toggle = document.querySelector(".toggle-input");
-
 toggle.addEventListener("change", toggleTheme);
 
-function toggleTheme() {
-
-    // check if toggle is checked if so, change the css class to dark
+function toggleTheme(){
+    // check if the toggle is checked
     if (toggle.checked){
-        page.classList.replace('light', 'dark');
-    } else{
-        page.classList.replace('dark', 'light');
+        body.classList.replace("light", "dark");
+    }else {
+        body.classList.replace('dark', 'light');
     }
 
-    // change the image of the button
-    if (page.classList.replace('light')) {
-        toggleIcon.src = './images/svg/Moon.svg';
-        toggleIcon.alt = 'Switch to Dark Theme';
-    }else {
-        toggleIcon.src = './images/svg/Sun.svg';
-        toggleIcon.alt = 'Switch to Light Theme';
-
+    // adjust class attatched to page / body element
+    if(body.classList.contains('light')) {
+        document.getElementById("toggle-icon").src = "./images/svg/Moon.svg"
+    } else {
+        document.getElementById("toggle-icon").src = "./images/svg/Sun.svg"
     }
 }
 

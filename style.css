@@ -1,25 +1,30 @@
 /* Color Palette... gruvbox - light dim / desaturated */
-:root{
-    --background: #fbf1c7;
-    --background-darker: #ebdab4;
-    --red:    #cc2412;
-    --green:  #98971a;
-    --yellow: #d79921;
-    --blue:   #458598;
-    --purple: #b16286;
-    --aqua:   #689d6a;
-    --orange: #d65d0e;
-    --gray:   #7c6f64;
-    --beige: #EBDAB4;
-    --dark-black: #282828;
-}
+/* :root{ */
+/*     --background: #fbf1c7; */
+/*     --background-darker: #ebdab4; */
+/*     --red:    #cc2412; */
+/*     --green:  #98971a; */
+/*     --yellow: #d79921; */
+/*     --blue:   #458598; */
+/*     --purple: #b16286; */
+/*     --aqua:   #689d6a; */
+/*     --orange: #d65d0e; */
+/*     --gray:   #7c6f64; */
+/*     --beige: #EBDAB4; */
+/*     --dark-black: #282828; */
+/* } */
 
 /* this is chris playing around with the light and dark modes 
 *  there are too many colours at the moment, we can cull anything we don't use
 * */
 .light{
-  --background: #fbf1c7;
-  --background-darker:  #ebdbb2;
+  --bg_h: #f9f5d7;
+  --bg:   #fbf1c7;
+  --bg_s: #f2e5bc;
+  --bg1:  #ebdbb2;
+  --bg2:  #d5c4a1;
+  --bg3:  #bdae93;
+  --bg4:  #a89984;
 
   --fg:  #282828;
   --fg1: #3c3836;
@@ -90,48 +95,77 @@
 *  ttps://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
 * */
 
-
-.toggle{
-    position:relative;
+.toggle {
+  position: relative;
+  margin-bottom: 24px;
+  user-select: none;
 }
 
-toggle-input{
-    position: absolute;
-    top:0;
-    left:0;
-    opacity: 0;
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  user-select: none;
 }
 
-.toggle-label{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border: 3px solid var(--purple);
-    padding: 4px;
-    border-radius: 50px;
-    width: 100px;
-    background-color: var(--orange);
-    transition: all 0.3s ease;
+.content:hover .toggle-icon {
+  animation: wiggle 1s linear;
 }
 
-.toggle-label:hover {
-    background-color: var(--gray-dim);
+.toggle-icon {
+  width: 28px;
+  user-select: none;
 }
 
-.toggle-label:active{
-    transform: scale(o.95);
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid var(--green-dim);
+  padding: 4px;
+  border-radius: 50px;
+  width: 100px;
+  margin: 0 auto;
+  background-color: var(--orange-dim);
+  transition: all 0.3s ease;
+  user-select: none;
 }
+
 
 
 body {
-    background-color: var(--background-darker);
+    background-color: var(--bg2);
     margin-top:50px;
     margin-left: auto;
     margin-right: auto;
-    justify-content:center; 
     display: flex;
+    flex-direction:column;
+    justify-content:center; 
+    align-items:center;
+    margin:0;
+    transition: var(--transition-delay);
 }
 
+.theme-toggle-button {
+    background-color: var(--blue);
+    fill:  var(--orange);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em; 
+    border-radius: .3em;
+    border: none;
+    outline: none;
+}
+.theme-toggle-button:hover{
+    background-color: var(-- red);
+    fill: var(--red);
+
+}
 /*
 A 'wrapper' for all content
 
@@ -143,7 +177,7 @@ A 'wrapper' for all content
 - The max width is 800px
 */
 #container {
-    background-color: var(--background);
+    background-color: var(--bg1);
     font-family: Arial, Helvetica, sans-serif;
     border-radius:10px;
     padding-bottom:10px;
@@ -211,15 +245,13 @@ A rule for the heading element within the header.
     position: -webkit-sticky;
     top: 0;
     width: 100%;
-    overflow: hidden;
 }
-
 
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: var(--beige);
+    color: var(--yellow-dim);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -230,12 +262,13 @@ A rule for the heading element within the header.
 .topnav a:hover {
     background-color: var(--green);
     color: var(--dark-black);
+    color: var(--fg);
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
     background-color: var(--aqua);
-    color: var(--beige);
+    color: var(--fg);
 }
 
 /*
@@ -276,9 +309,9 @@ The following guidelines apply:
     margin-bottom:10px;
 }
 
-.blog-posts footer{
+footer{
     font-size:11px;
-    text-decoration-color:#555555;
+    color:var(--fg1);
     text-align: center;
 }
 

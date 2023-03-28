@@ -28,8 +28,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
+    <body class = "light">
         <div id="container">
+
             <div class = "header">
                 <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
                 <div class= "banner-text">
@@ -37,6 +38,7 @@
                     <p>We are here to bolg about books</p>
                 </div>
             </div>
+            
             <div class="topnav">
                 <a class="active" href="#Index">Home</a>
                 <a href="about.html">About</a>
@@ -44,7 +46,14 @@
                 <a href="create.html">Create</a>
                 <a href="login.html">login</a>
                 <a href="register.html">register</a>
-            </div>        <!-- lets put our nav bar here -->
+                
+            </div>
+            <div class="toggle">
+                <input type="checkbox" id="theme" class="toggle-input">
+                <label for="theme" class="toggle-label">
+                    <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
+                </label>
+            </div>
 
             <div class = "blog-posts" >
             <!--need to turn this into a button?  -->
@@ -97,20 +106,11 @@
                     </p>
                     <p>author</p>
                 </div>
-                <!-- some of below may not be necisary... and we can -->
-                <!-- pretty it up a bit -->
-                <div class = "toggle">
-                    <input type= "checkbox" id="theme" class="toggle-input">
-                    <label for="theme" class="toggle-label">
-                        <img src="./images/svg/Moon.svg" alt="Dark theme" class="toggle-icon">
-                    </label>
-                </div>
+            </div>
             <footer>
                 <p>all content covered by creative commons zero (CC0) | the blog group</p>
             </footer>
-            </div>
         </div>
     </body>
 
 </html>
- 
