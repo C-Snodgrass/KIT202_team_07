@@ -166,6 +166,17 @@ body {
     fill: var(--red);
 
 }
+
+
+
+.archivedArticle{
+    border: 2px solid var(--fg2);
+    border-radius:25px;
+    padding:20px;
+    margin: 10px;
+    box-shadow: 5px 10px;
+
+}
 /*
 A 'wrapper' for all content
 
