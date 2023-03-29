@@ -1,99 +1,64 @@
+//constants for checking if on page
+const onIndex = document.URL.includes("index.html") //if on about.html
+const onAbout = document.URL.includes("about.html") //if on about.html
 const onArchive = document.URL.includes("archive.html") //if on archive.html
+const onCreate = document.URL.includes("create.html") //if on about.html
+const onLogin = document.URL.includes("login.html") //if on about.html
+const onRegister = document.URL.includes("register.html") //if on about.html
 
-let showHideBtn1 = document.querySelector("#showHideBtn1"); //button for post 1
-let showHideBtn2 = document.querySelector("#showHideBtn2"); //button for post 2
-let showHideBtn3 = document.querySelector("#showHideBtn3"); //button for post 3
-let showHideBtn4 = document.querySelector("#showHideBtn4"); //button for post 4
-let showHideBtn5 = document.querySelector("#showHideBtn5"); //button for post 5
-let showHideContent1 = document.querySelector("#showHideContent1"); //content for post 1
-let showHideContent2 = document.querySelector("#showHideContent2"); //content for post 2
-let showHideContent3 = document.querySelector("#showHideContent3"); //content for post 3
-let showHideContent4 = document.querySelector("#showHideContent4"); //content for post 4
-let showHideContent5 = document.querySelector("#showHideContent5"); //content for post 5
+//archive page varaibles
+let archiveBtn1 = document.querySelectorAll(".archiveBtn")[0]; //button for post 1
+let archiveBtn2 = document.querySelectorAll(".archiveBtn")[1]; //button for post 2
+let archiveBtn3 = document.querySelectorAll(".archiveBtn")[2]; //button for post 3
+let archiveBtn4 = document.querySelectorAll(".archiveBtn")[3]; //button for post 4
+let archiveBtn5 = document.querySelectorAll(".archiveBtn")[4]; //button for post 5
 
-//shows/hides archived posts
-function showHidePost(content, button, value) {
-    if(content.hidden == true) {
-        value = 1;
-    }
-    else if (content.hidden == false) {
-        value = 0;
-    }
-    if (value == 0) {
-        content.hidden = true;
-        value = 1;
+let archiveBox1 = document.querySelectorAll(".archiveBox")[0];
+let archiveBox2 = document.querySelectorAll(".archiveBox")[1];
+let archiveBox3 = document.querySelectorAll(".archiveBox")[2];
+let archiveBox4 = document.querySelectorAll(".archiveBox")[3];
+let archiveBox5 = document.querySelectorAll(".archiveBox")[4];
+
+//about page variables
+let aboutBtn1 = document.querySelectorAll(".aboutBtn")[0];
+let aboutBtn2 = document.querySelectorAll(".aboutBtn")[1];
+let aboutBtn3 = document.querySelectorAll(".aboutBtn")[2];
+let aboutBtn4 = document.querySelectorAll(".aboutBtn")[3];
+let aboutBtn5 = document.querySelectorAll(".aboutBtn")[4];
+
+let aboutBox1 = document.querySelectorAll(".aboutBox")[0];
+let aboutBox2 = document.querySelectorAll(".aboutBox")[1];
+let aboutBox3 = document.querySelectorAll(".aboutBox")[2];
+let aboutBox4 = document.querySelectorAll(".aboutBox")[3];
+let aboutBox5 = document.querySelectorAll(".aboutBox")[4];
+
+function showHideBox(box, button) {
+    if(box.classList.contains('show')) {
+        box.classList.remove('show');
+        box.classList.add('hide');
         button.innerHTML = "Show";
     }
-    else if (value == 1) {
-        content.hidden = false;
-        value = 0;
+    else if(box.classList.contains('hide')) {
+        box.classList.add('show');
+        box.classList.remove('hide');
         button.innerHTML = "Hide";
     }
 }
 
-//checks that we're on archive.html, and if we are applies the following
+
+if (onAbout) {
+    aboutBtn1.addEventListener("click", showHideBox.bind(null, aboutBox1, aboutBtn1));
+    aboutBtn2.addEventListener("click", showHideBox.bind(null, aboutBox2, aboutBtn2)); 
+    aboutBtn3.addEventListener("click", showHideBox.bind(null, aboutBox3, aboutBtn3)); 
+    aboutBtn4.addEventListener("click", showHideBox.bind(null, aboutBox4, aboutBtn4));
+    aboutBtn5.addEventListener("click", showHideBox.bind(null, aboutBox5, aboutBtn5));     
+}
+
 if (onArchive) {
-    showHideContent1.hidden = true;
-    showHideContent2.hidden = true;
-    showHideContent3.hidden = true;
-    showHideContent4.hidden = true;
-    showHideContent5.hidden = true;
-    
-    showHideBtn1.addEventListener("click", showHidePost.bind(null, showHideContent1, showHideBtn1));
-    showHideBtn2.addEventListener("click", showHidePost.bind(null, showHideContent2, showHideBtn2));
-    showHideBtn3.addEventListener("click", showHidePost.bind(null, showHideContent3, showHideBtn3));
-    showHideBtn4.addEventListener("click", showHidePost.bind(null, showHideContent4, showHideBtn4));
-    showHideBtn5.addEventListener("click", showHidePost.bind(null, showHideContent5, showHideBtn5));
+    archiveBtn1.addEventListener("click", showHideBox.bind(null,archiveBox1, archiveBtn1));
+    archiveBtn2.addEventListener("click", showHideBox.bind(null,archiveBox2, archiveBtn2));
+    archiveBtn3.addEventListener("click", showHideBox.bind(null,archiveBox3, archiveBtn3));
+    archiveBtn4.addEventListener("click", showHideBox.bind(null,archiveBox4, archiveBtn4));
+    archiveBtn5.addEventListener("click", showHideBox.bind(null,archiveBox5, archiveBtn5));
 }
 
-// form validation for create page
-function validateForm()
-{
-    if(document.create.title.value === "" || document.create.title.value.length >70)
-    {
-        alert ("Please enter a valid Title for your blog");
-        document.create.title.focus();
-        return false;
-    }
-
-    if(document.create.tags.value == "")
-    {
-        alert("Please enter a keyword or tag for your blog post");
-        document.create.tags.focus();
-        return false;
-    }
-   
-    if(document.create.blogPost.value == "")
-    {
-        alert("Please enter your blog post");
-        document.create.blodPost.focus();
-        return false;
-    }
-}
-
-const body= document.querySelector("body");
-const toggle = document.querySelector(".toggle-input");
-toggle.addEventListener("change", toggleTheme);
-
-// Theme
-
-function toggleTheme(){
-    // check if the toggle is checked
-    if (toggle.checked){
-        body.classList.replace("light", "dark");
-    }else {
-        body.classList.replace('dark', 'light');
-    }
-
-    // adjust class attatched to page / body element
-    if(body.classList.contains('light')) {
-        document.getElementById("toggle-icon").src = "./images/svg/Moon.svg"
-    } else {
-        document.getElementById("toggle-icon").src = "./images/svg/Sun.svg"
-    }
-}
-
-// document.querySelector("#showHideBtn2").addEventListener("click", showHidePost);
-// document.querySelector("#showHideBtn3)addEventListener("click", showHidePost);
-// showHideBtn4.addEventListener("click", showHidePost);
-// showHideBtn5.addEventListener("click", showHidePost);
