@@ -1,71 +1,182 @@
 /* Color Palette... gruvbox - light dim / desaturated */
-:root{
-    --background: #fbf1c7;
-    --background-darker: #ebdab4;
-    --red:    #cc2412;
-    --green:  #98971a;
-    --yellow: #d79921;
-    --blue:   #458598;
-    --purple: #b16286;
-    --aqua:   #689d6a;
-    --orange: #d65d0e;
-    --gray:   #7c6f64;
-    --beige: #EBDAB4;
-    --dark-black: #282828;
+/* :root{ */
+/*     --background: #fbf1c7; */
+/*     --background-darker: #ebdab4; */
+/*     --red:    #cc2412; */
+/*     --green:  #98971a; */
+/*     --yellow: #d79921; */
+/*     --blue:   #458598; */
+/*     --purple: #b16286; */
+/*     --aqua:   #689d6a; */
+/*     --orange: #d65d0e; */
+/*     --gray:   #7c6f64; */
+/*     --beige: #EBDAB4; */
+/*     --dark-black: #282828; */
+/* } */
 
+/* this is chris playing around with the light and dark modes 
+*  there are too many colours at the moment, we can cull anything we don't use
+* */
+.light{
+  --bg_h: #f9f5d7;
+  --bg:   #fbf1c7;
+  --bg_s: #f2e5bc;
+  --bg1:  #ebdbb2;
+  --bg2:  #d5c4a1;
+  --bg3:  #bdae93;
+  --bg4:  #a89984;
+
+  --fg:  #282828;
+  --fg1: #3c3836;
+  --fg2: #504945;
+  --fg3: #665c54;
+  --fg4: #7c6f64;
+
+  --red:    #9d0006;
+  --green:  #79740e;
+  --yellow: #b57614;
+  --blue:   #076678;
+  --purple: #8f3f71;
+  --aqua:   #427b58;
+  --orange: #af3a03;
+  --gray:   #928374;
+
+  --red-dim:    #cc2412;
+  --green-dim:  #98971a;
+  --yellow-dim: #d79921;
+  --blue-dim:   #458598;
+  --purple-dim: #b16286;
+  --aqua-dim:   #689d6a;
+  --orange-dim: #d65d0e;
+  --gray-dim:   #7c6f64;
 }
 
-.box {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    border: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    overflow: hidden;
-}
-  
-.show {
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
-    height: auto;
-    width: auto;
-    border: 2px;
-    border-color: var(--background-darker);
-    border-style: solid;
-    background-color: white;
-}
+.dark{
+  --bg_h: #1d2021;
+  --bg:   #282828;
+  --bg_s: #32302f;
+  --bg1:  #3c3836;
+  --bg2:  #504945;
+  --bg3:  #665c54;
+  --bg4:  #7c6f64;
 
-.hide {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    border: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    overflow: hidden
-}
+  --fg:  #fbf1c7;
+  --fg1: #ebdbb2;
+  --fg2: #d5c4a1;
+  --fg3: #bdae93;
+  --fg4: #a89984;
 
+  --red:    #fb4934;
+  --green:  #b8bb26;
+  --yellow: #fabd2f;
+  --blue:   #83a598;
+  --purple: #d3869b;
+  --aqua:   #8ec07c;
+  --gray:   #928374;
+  --orange: #fe8019;
+
+  --red-dim:    #cc2412;
+  --green-dim:  #98971a;
+  --yellow-dim: #d79921;
+  --blue-dim:   #458588;
+  --purple-dim: #b16286;
+  --aqua-dim:   #689d6a;
+  --gray-dim:   #a89984;
+  --orange-dim: #d65d0e;
+}
 /*
 * can call colours by their variable...
 * e.g.
 * body{ background-color: var(--background)}
 */
 
-/*
-- The background color is #c3c3c3
-- All content should be centered
-- The top margin is 50px and the left and right are automatic
-*/
+/* theme toggle styling 
+*  
+*  ttps://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
+* */
+
+.toggle {
+  position: relative;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  user-select: none;
+}
+
+.content:hover .toggle-icon {
+  animation: wiggle 1s linear;
+}
+
+.toggle-icon {
+  width: 28px;
+  user-select: none;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid var(--green-dim);
+  padding: 4px;
+  border-radius: 50px;
+  width: 100px;
+  margin: 0 auto;
+  background-color: var(--orange-dim);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+
+
 body {
-    background-color: var(--background-darker);
+    background-color: var(--bg2);
     margin-top:50px;
     margin-left: auto;
     margin-right: auto;
-    justify-content:center; 
     display: flex;
+    flex-direction:column;
+    justify-content:center; 
+    align-items:center;
+    margin:0;
+    transition: var(--transition-delay);
 }
 
+.theme-toggle-button {
+    background-color: var(--blue);
+    fill:  var(--orange);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em; 
+    border-radius: .3em;
+    border: none;
+    outline: none;
+}
+.theme-toggle-button:hover{
+    background-color: var(-- red);
+    fill: var(--red);
+
+}
+
+
+
+.archivedArticle{
+    border: 2px solid var(--fg2);
+    border-radius:25px;
+    padding:20px;
+    margin: 10px;
+    box-shadow: 5px 10px;
+
+}
 /*
 A 'wrapper' for all content
 
@@ -77,13 +188,14 @@ A 'wrapper' for all content
 - The max width is 800px
 */
 #container {
-    background-color: var(--background);
+    background-color: var(--bg1);
     font-family: Arial, Helvetica, sans-serif;
     border-radius:10px;
     padding-bottom:10px;
     max-width:800px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     color: var(--gray);
 }
 
@@ -135,20 +247,22 @@ A rule for the heading element within the header.
     text-transform:uppercase;
 }
 
-/* Add a black background color to the top navigation */
+/* top navagation styling */
 .topnav {
     display:flex;
     justify-content:center;
     background-color: #333;
-    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
 }
-
 
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: var(--beige);
+    color: var(--yellow-dim);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -159,12 +273,13 @@ A rule for the heading element within the header.
 .topnav a:hover {
     background-color: var(--green);
     color: var(--dark-black);
+    color: var(--fg);
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
     background-color: var(--aqua);
-    color: var(--beige);
+    color: var(--fg);
 }
 
 /*
@@ -205,9 +320,9 @@ The following guidelines apply:
     margin-bottom:10px;
 }
 
-.blog-posts footer{
+footer{
     font-size:11px;
-    text-decoration-color:#555555;
+    color:var(--fg1);
     text-align: center;
 }
 
@@ -293,107 +408,4 @@ The box-sizing declaration controls how the browser calculates width and height 
 
 
     box-sizing: border-box;
-}
-
-.archiveBtn {
-    background-color: inherit;
-    cursor: pointer;
-    border-color: var(--dark-black);
-    border-radius: 8px;
-    border-style: solid;
-}
-
-.aboutBtn {
-    background-color: inherit;
-    cursor: pointer;
-    border-color: var(--dark-black);
-    border-radius: 8px;
-    border-style: solid;
-}
-
-#archivedContent {
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left:15px;
-    margin-right:15px;
-}
-
-#archivedContent footer {
-    font-size:11px;
-    text-decoration-color:#555555;
-    text-align: center;
-}
-
-#aboutContent {
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left:15px;
-    margin-right:15px;
-}
-
-#aboutContent footer {
-    font-size:11px;
-    text-decoration-color:#555555;
-    text-align: center;
-}
-
-#aboutContent h2{
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 30px;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:var(--orange);
-}
-
-#aboutPageAnswers h3{
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--blue);
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    vertical-align: middle;
-}
-
-#groupHeading{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 24px;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:var(--green);
-}
-
-#groupAnswerHeading {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-size: 22px;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:var(--dark-black);
-}
-
-#studentNameId {
-    font-size: 18px;
-    color: var(--dark-black)
-}
-
-.studentName {
-    text-align: left;
-}
-.studentId {
-    text-align: left;
-    text-indent: 16px;
-}
-
-#aboutPageAnswers p{
-    font-size: 16px;
-    color: var(--gray);
-}
-
-#aboutPageAnswers h4{
-    font-size: 20px;
-    color: var(--dark-black);
-    margin: 5px;
 }
