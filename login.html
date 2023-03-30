@@ -12,42 +12,58 @@
 
     <head>
         <meta charset="UTF-8">
-        <!-- TODO add your names -->
-        <meta name="author" content="Chris Snodgrass">
-        <meta name="author" content="Fraser Miller">
+        <meta name="author" content="co-authored by Chris Snodgrass, Fraser Miller, and James Stansfield">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
         <title>"Login"</title>
     </head>
     
     <body class = "light">
-        <div class="topnav">
-            <a href = "index.html"> Home</a>
-            <a href="about.html">About</a>
-            <a href="archive.html">Archive</a>
-            <a href="create.html">Create</a>
-            <a class="active" href="#Login">Login</a>
-            <a href="register.html">register</a>
-        </div> 
-        <form>
-            <table>
-                <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" required></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6-12 characters" required></td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>
-                            Login
-                        </button>
-                    </td>
-                </tr>
-            </table>
-        </form> 
+        
+        <div id="container">
+
+            <div class = "header">
+                <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
+                <div class= "banner-text">
+                    <h1>Book Blog</h1>
+                    <p>We are here to blog about books</p>
+                </div>
+            </div>
+
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="archive.html">Archive</a>
+                <a href="create.html">Create</a>
+                <a class="active" href="#Login">login</a>
+                <a href="register.html">register</a>
+            </div>
+
+            <br>
+
+            <form id="loginForm">
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6-12 characters" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                Login
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <footer>
+                <p>all content covered by creative commons zero (CC0) | the blog group</p>
+            </footer> 
+        </div>
     </body>
 
 </html>
