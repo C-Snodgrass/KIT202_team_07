@@ -409,3 +409,139 @@ The box-sizing declaration controls how the browser calculates width and height 
 
     box-sizing: border-box;
 }
+
+
+.box {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    border: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+  
+.show {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    height: auto;
+    width: auto;
+    border: 2px;
+    border-color: var(--background-darker);
+    border-style: solid;
+    background-color: white;
+}
+
+.hide {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    border: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden
+}
+
+.archiveBtn {
+    background-color: inherit;
+    cursor: pointer;
+    border-color: var(--dark-black);
+    border-radius: 8px;
+    border-style: solid;
+    
+}
+
+.aboutBtn {
+    background-color: inherit;
+    cursor: pointer;
+    border-color: var(--dark-black);
+    border-radius: 8px;
+    border-style: solid;
+}
+
+#archivedContent {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+#archivedContent footer {
+    font-size:11px;
+    text-decoration-color:#555555;
+    text-align: center;
+}
+
+#aboutContent {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+#aboutContent footer {
+    font-size:11px;
+    text-decoration-color:#555555;
+    text-align: center;
+}
+
+#aboutContent h2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:var(--orange);
+}
+
+#aboutPageAnswers h3{
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--blue);
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+#groupHeading{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:var(--green);
+}
+
+#groupAnswerHeading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:var(--dark-black);
+}
+
+#studentNameId {
+    font-size: 18px;
+    color: var(--dark-black)
+}
+
+.studentName {
+    text-align: left;
+}
+.studentId {
+    text-align: left;
+    text-indent: 16px;
+}
+
+#aboutPageAnswers p{
+    font-size: 16px;
+    color: var(--gray);
+}
+
+#aboutPageAnswers h4{
+    font-size: 20px;
+    color: var(--dark-black);
+    margin: 5px;
+}
