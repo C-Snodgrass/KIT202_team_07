@@ -49,7 +49,7 @@ if (onArchive) {
 // form validation for create page
 function validateForm()
 {
-    if(document.create.title.value === "" || document.create.title.value.length >70)
+    if(document.create.title == "" || document.create.title.value.length >70)
     {
         alert ("Please enter a valid Title for your blog");
         document.create.title.focus();
@@ -70,12 +70,11 @@ function validateForm()
         return false;
     }
 }
+//<img src="./images/svg/Moon.svg" alt="Dark mode" class="toggle-icon">
 
 const body= document.querySelector("body");
 const toggle = document.querySelector(".toggle-input");
 toggle.addEventListener("change", toggleTheme);
-
-// Theme
 
 function toggleTheme(){
     // check if the toggle is checked
