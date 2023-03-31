@@ -426,7 +426,7 @@ The box-sizing declaration controls how the browser calculates width and height 
     padding-left: 10px;
     padding-right: 10px;
 
-}
+}  
 
 .hide {
     opacity: 0;

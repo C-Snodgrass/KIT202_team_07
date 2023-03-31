@@ -130,10 +130,6 @@ function isTrue(value){
     return value === 'true';
 }
 
-// save the state of the check box on local storage, so it has
-// persistance
-
-
 toggle.addEventListener("change", toggleTheme);
 
 // take me to the top
