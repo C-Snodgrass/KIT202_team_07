@@ -34,7 +34,7 @@
             <table id="studentNameId"> 
                 <tr>                        
                     <td class="studentName">Chris Snodgrass</td>
-                    <td class="studentId">ID:</td>
+                    <td class="studentId">ID: 113255</td>
                 </tr>
                 <tr>
                     <td class="studentName">Fraser Miller</td>
@@ -55,21 +55,25 @@
                 <div class="aboutBox hide" id="aboutContent1" name="subjectMatter">
                     <h4>How did our group choose the subject matter and theme?</h4>
                     <p>
-                            Our group thought of a few idea for our subject matter and theme before we settled on a book blog.
-                            The reason for this is that, a book theme gives us lots of options and flexibilty on what we want
-                            to do, as we can be as narrow or as broad as we would like.
+                        Our group thought of a few ideas for our subject matter and theme before we settled on a book blog.
+                        The reason for this is that, a book theme gives us lots of options and flexibilty on what we want
+                        to do, as we can be as narrow or as broad as we would like. Upon reflection it was found that books
+                        and they way they are stored are reflect the structure of a web page.
                     </p>
                         
                     <h4>How did our group come up with the asthethic design?</h4>
                     <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                        James and Chris had a brief discussion of favoured text edditor colour paletts. While neither of them
+                        use the Gruvbox theme it was decided the middle of the road beige, and retro 70s esque color theme would
+                        suit the bland toppic of books, books, books.
                     </p>
                         
                     <h4>When choosing our site design, what considerations did we make?</h4>
                     <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                        Ease of readability was high on the list of priorities. We wanted the site to have enough contrast to be
+                        easily legible, however we did not want to burn out the viewer's retteners. Was also aimed to keep the 
+                        content centered so as the viewer did not have to chase the it around the screen. Similar pirincipals
+                        to text edditing and code.
                     </p>
                 </div>
                 <p>
@@ -78,14 +82,12 @@
                     <div class="aboutBox hide" id="aboutContent2" name="passwordPolicy">
                         <h4>How did our group implement our password policy?</h4>
                         <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                            Did you impliment this Fraser
                         </p>
                             
                         <h4>How did our group validate the password fields against this policy?</h4>
                         <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                            This one you again Frasier
                         </p>
                     </div>
                 </p>
@@ -106,15 +108,15 @@
                     <div class="aboutBox hide" id="aboutContent4" name="siteEmbelishments">                            
                         <h4>What embelishments did our group add?</h4>
                         <p>
-                            emblishment 1: 
+                            Dark Theme
                         </p>
                         
                         <p>
-                            emblishment 2:                            
+                            Sticky nav bar
                         </p>
                         
                         <p>
-                            emblishment 3: 
+                            Top of page link 
                         </p>
                             
                         <p>
@@ -130,18 +132,31 @@
                         </p>
                         <h4>Why did our group add these embelishments, what was the purpose?</h4>
                         <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                            It was decided that a dark mode would dovetail into our core consideration of legibility without being
+                            too bright. The sticky nav bar ensured that content on other pages could be easily access no matter where
+                            the user found themseleves keeping content easiliy accessible. This same principal is why we added the 
+                            Top of the page link, however that was omitted from pages with insufficient content.
                         </p>
                         <h4>How did our group implement these embelishments?</h4>
                         <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                        </p>
+                            dark mode... all colours are accessed through variable, these variables are held in two seperate classes,
+                            one "light" the other "dark". These classes can be applied to the body. A checkbox (with a hidden box) 
+                            was made and and event listener listens to see if the box is ticed if so the class is changed in the body
+                            and the SVG is changed in the logo / checkbox. 
+                            <br>
+                            Sticky bar is as simple as one line of css
+                            <code>position: sticky;</code>
+                            <br>
+                            as is the top of the page link, if we want we should probably put it in a button?? 
+                            its simply a href which quals "#top", guess that's a reserved word.
+                        </p> 
                         <h4>Was our group faced with challenges implementing these embelishments? How did we overcome them?</h4>
                         <p>
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
-                            filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                            Chris had a great deal of trouble implimenting persistance with the dark mode, however with the aide
+                            of the internet and the console he was eventally consoled, when it worked.
+
+                            Working in a distributed maner was difficult, non of us being particularly adept with git. However
+                            with patience and teamwork we overcome the challanges
                         </p>
                     </div>
                 </p>
@@ -151,6 +166,11 @@
                     <div class="aboutBox hide" id="aboutContent5" name="referenceList">
                         <h4>References:</h4>
                         <p>
+                            morhetz is the inventor of gruvbox ... https://github.com/morhetz/gruvbox
+                            this css styling was pretty much a direct rip ...https://github.com/YV31/gruvbox-css
+                            svg https://heroicons.dev/
+                            impliment dark mode https://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
+                            banner -- Photo by Pixabay from Pexels: https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/
                             Great link 
                         </p>
                     </div>

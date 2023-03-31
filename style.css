@@ -13,7 +13,6 @@
 /*     --beige: #EBDAB4; */
 /*     --dark-black: #282828; */
 /* } */
-
 /* this is chris playing around with the light and dark modes 
 *  there are too many colours at the moment, we can cull anything we don't use
 * */
@@ -90,10 +89,7 @@
 * body{ background-color: var(--background)}
 */
 
-/* theme toggle styling 
-*  
-*  ttps://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
-* */
+/* theme toggle styling */
 
 .toggle {
   position: relative;
@@ -109,7 +105,7 @@
   opacity: 0;
   user-select: none;
 }
-
+/* is this needed? */
 .content:hover .toggle-icon {
   animation: wiggle 1s linear;
 }
@@ -346,24 +342,25 @@ The 'Cancel / Back' button should have:
 You may need to define additional CSS rules to style the button colours
 */
 .btn {
-    border:none;
+    border:2px dotted var(--bg2);
     padding:10px 15px;
-    color:white;
+    color:var(--yellow-dim);
+    background-color:var(--bg1);
     text-transform:uppercase;
     text-decoration:none;
     font-size: 15px;
 }
-
+.btn:hover{
+    background-color:var(--green);
+}
 .btn#Register{
     background-color:#b01818;
 }
 .btn#Register:hover{
-    background-color:#c04141;
+    background-color:var(-- green);
 }
 
-.btn:hover{
-    background-color:#c04141;
-}
+
 
 
 .btn#Cancel{

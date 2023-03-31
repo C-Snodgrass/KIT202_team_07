@@ -1,3 +1,5 @@
+
+
 const onIndex = document.URL.includes("index.html") //if on about.html
 const onAbout = document.URL.includes("about.html") //if on about.html
 const onArchive = document.URL.includes("archive.html") //if on archive.html
@@ -84,14 +86,25 @@ function validateForm()
         return false;
     }
 }
-//<img src="./images/svg/Moon.svg" alt="Dark mode" class="toggle-icon">
 
+// Dark them switcher
 const body= document.querySelector("body");
-const toggle = document.querySelector(".toggle-input");
-toggle.addEventListener("change", toggleTheme);
+const toggle = document.querySelector('.toggle-input');
+// check the state of the dark mode box on page load
+setCheckedState();
+
+function setCheckedState(){
+  // checks if localStorage has a "checked" value set at all
+  if (localStorage.checked != undefined) {
+    // if it does, it sets the state of the toggle accordingly
+    toggle.checked = isTrue(localStorage.getItem('checked'));
+    // after setting the toggle state, the theme is adjusted according to the checked state
+    toggleTheme();
+    }
+}
 
 function toggleTheme(){
-    // check if the toggle is checked
+    // check if the toggle is checked if so chang to dark theme
     if (toggle.checked){
         body.classList.replace("light", "dark");
     }else {
@@ -99,12 +112,30 @@ function toggleTheme(){
     }
 
     // adjust class attatched to page / body element
+    // if we are in light theme, make the picture the moon
     if(body.classList.contains('light')) {
         document.getElementById("toggle-icon").src = "./images/svg/Moon.svg"
     } else {
         document.getElementById("toggle-icon").src = "./images/svg/Sun.svg"
     }
+
+    localStorage.setItem('checked', toggle.checked);
 }
 
+function isTrue(value){
+    // convert string to boolean
+    return value === 'true';
+}
+
+// save the state of the check box on local storage, so it has
+// persistance
+
+
+toggle.addEventListener("change", toggleTheme);
+
+// take me to the top
+function toTop() {
+  document.documentElement.scrollTop = 0; // For Chrome, etc
+} 
 
 
