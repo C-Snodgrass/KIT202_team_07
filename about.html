@@ -189,28 +189,46 @@
                             <p>
 
                                 It was decided that a dark mode would dovetail into our core consideration of legibility without being
-                                too bright. The sticky nav bar ensured that content on other pages could be easily access no matter where
-                                the user found them selves keeping content easily accessible. This same principal is why we added the 
-                                Top of the page link, however that was omitted from pages with insufficient content.
+                                too bright.
+                                <br><br>
+                                The sticky nav bar ensured that content on other pages could be easily access no matter where
+                                the user found them selves keeping content easily accessible. 
+                                <br><br>
+                                This same principal is why we added the top of the page link, however that was omitted from pages with insufficient content. 
+                                <br><br>
+                                The animated showing/hiding content allowed for a more user engaging experience, and prevented the page from 
+                                changing dramtaically in an instant.
+                                <br><br>
+                                The rounded boxes for content, created a much nicer design for the users, and made it clear on what parts of the
+                                page were the content for the various posts/about us answers.
+                                <br><br>
+                                The pop-up alerts brought considerable attention to the user about what they need to do to correctly validate the form.
+                                This should better help the user realise the requirements in filling out the form.
 
                             </p>
                             <h4>How did our group implement these embellishments?</h4>
                             <p>
-
-
                                 dark mode... all colours are accessed through variable, these variables are held in two separate classes,
                                 one "light" the other "dark". These classes can be applied to the body. A checkbox (with a hidden box) 
                                 was made and event listener listens to see if the box is ticked if so the class is changed in the body
                                 and the SVG is changed in the logo / checkbox. 
-                                <br>
+                                <br><br>
                                 Sticky bar is as simple as one line of css 
                                 <br>
                                 <code>position: sticky;</code>
                                 <br>
-                                the top of page link is a button, "on click" it calls a toTop function which cahnges scrollTop to 0
-                                <br>
-
-                                <!-- maybe say how you implimented the folding boxes here James -->
+                                the top of page link is a button, "on click" it calls a toTop function which changes scrollTop to 0
+                                <br><br>
+                                The animated show/hiding content, activated by clicking on the button was done through a comnbination of CSS and JS.
+                                This was done by creating a function on JS which would add or remove a class to the 'content box', to show or hide. 
+                                When the hide class was active, the content would be hidden, but when the show class was active, it would present the 
+                                content as intended. Such styling properties were done inside CSS.
+                                <br><br>
+                                The rounded boxes were implemented through simple css styling, most specifically by using 'border-radius'. This along
+                                with a relevant colour scheme through css properties, created the clean, rounded box design. 
+                                These boxes were also assigned to be the element that would be shown/hidden by the show/hide buttons.
+                                <br><br>
+                                <!-- pop up alerts? -->
 
                             </p> 
                             <h4>Was our group faced with challenges implementing these embelishments? How did we overcome them?</h4>
@@ -219,7 +237,11 @@
                                 of the internet and the console he was eventually consoled, when it worked. The method was to use
                                 the localStorage method, which can hold objects (in the user's browser?). this local storage held the
                                 state of the check box which could be check on page load... then the appropriate theme applied.
-                                <br>
+                                <br><br>
+                                James also found some trouble trying to correctly get the showing/hiding content to work properly and 
+                                after some research on the internet eventually found adding and removing classes through javascript 
+                                and styling them in CSS was the most effective way.
+                                <br><br>
                                 While not an embellishment it is of not that the largest challenge the team faced was working in an
                                 asynchrynos distributed manner. None of us being particularly adept with git. However with patience
                                 we managed to git there ("hahahah").
@@ -241,6 +263,9 @@
                                 implement dark mode https://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d.
                                 <br><br>
                                 banner -- Photo by Pixabay from Pexels: https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/
+                                <br><br>
+                                w3schools was referred to when researching: https://www.w3schools.com/html/ , https://www.w3schools.com/css/ 
+                                , and https://www.w3schools.com/js/
                             </p>
                         </div>
                     </p>
