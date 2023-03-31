@@ -119,17 +119,26 @@
                         <div class="aboutBox hide" id="aboutContent2" name="passwordPolicy">
                             <h4>How did our group implement our password policy?</h4>
                             <p>
-                                Our password policy was designed to make the user login information as secure as possible but at the same time
-
-                                striking the balance between ease of use and security.  We decided on an alpha numeric password 6-12 characters long,
-                                where at least one character must be capitalized, and another not, and include at least one digit. ... how was it 
-                                actually implimented? like break down the JS??
-
+                                striking the balance between ease of use and security.  We decided on an alpha numeric password 6-12
+                                characters long, where at least one character must be capitalized, and another not, and include at 
+                                least one digit. 
                             </p>
                                 
                             <h4>How did our group validate the password fields against this policy?</h4>
                             <p>
-                                The password had required sybmols and alpha numeric requirements which was validated using pattern matching in the password input type.
+                                the built in HTML5 pattern attirbute allowed us to check the regular expression (string) input into password
+                                field no 1.
+                                <br>
+                                <code>pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}"</code>
+                                <br>
+                                <ul>
+                                    <li>the first parentheses means we are looking for at least one digit</li>
+                                    <li>the second expression measn looking ofr one lowercase</li>
+                                    <li>the third means looking for atleast one uppercase</li>
+                                    <li>and the fourth is six to 12 characters.</li>
+                                </ul>
+                                once the regex check was done by HTML on password field one, it coud be checked agains
+                                password field two to ensure they were the same.                         
                             </p>
                         </div>
                     </p>
