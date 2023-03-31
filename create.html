@@ -14,52 +14,60 @@
 
     <head>
         <meta charset="UTF-8">
-        <!-- TODO add your names -->
-        <meta name="author" content="Chris Snodgrass">
-        <meta name="author" content="Fraser Miller">
+        <meta name="author" content="co-authored by Chris Snodgrass, Fraser Miller, and James Stansfield">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
         <title>"Create"</title>
     </head>
     
     <body class = "light">
-        <div class="topnav">
-            <a href = "index.html"> Home</a>
-            <a href="about.html">About</a>
-            <a href="archive.html">Archive</a>
-            <a class="active" href="#Create">Create</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-            <div class="toggle">
-                    <input type="checkbox" id="theme" class="toggle-input">
-                    <label for="theme" class="toggle-label">
-                        <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
-                    </label>
+
+        <div id="container">
+            <div class = "header">
+                <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
+                <div class= "banner-text">
+                    <h1>Book Blog</h1>
+                    <p>We are here to blog about books</p>
+                </div>
             </div>
-        </div> 
-        <form name="create" onsubmit="return (validateForm());" >
-            <table>
-                <tr>
-                    <td>Title</td>
-                    <td><input type="text" name="title"></td>
-                </tr>
-                <tr>
-                    <td>Tags/Keywords</td>
-                    <td><input type="text" name="tags"></td>
-                </tr>
-                <tr>
-                    <td>Blog Post</td>
-                    <td><input type="text" name="blogPost"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" onclick="(href='index.html')"/>
-                    </td>
-                    <td><input type="reset" name="reset"/></td>
-                </tr>
 
-            </table>
-        </form> 
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="archive.html">Archive</a>
+                <a class="active" href="#Create">Create</a>
+                <a href="login.html">login</a>
+                <a href="register.html">register</a>
+            </div>
+
+            <br>
+
+            <form id="createForm" name="create" onsubmit="return (validateForm());" >
+                <table>
+                    <tr>
+                        <td>Title</td>
+                        <td><input type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td>Tags/Keywords</td>
+                        <td><input type="text" name="tags"></td>
+                    </tr>
+                    <tr>
+                        <td>Blog Post</td>
+                        <td><input type="text" name="blogPost"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" onclick="(href='index.html')"/>
+                        </td>
+                        <td><input type="reset" name="reset"/></td>
+                    </tr>
+
+                </table>
+            </form>
+            <footer>
+                <p>all content covered by creative commons zero (CC0) | the blog group</p>
+            </footer> 
+        </div>
     </body>
-
 </html>

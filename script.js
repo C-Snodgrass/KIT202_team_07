@@ -1,5 +1,4 @@
-
-
+9
 const onIndex = document.URL.includes("index.html") //if on about.html
 const onAbout = document.URL.includes("about.html") //if on about.html
 const onArchive = document.URL.includes("archive.html") //if on archive.html
@@ -13,6 +12,7 @@ let archiveBtn2 = document.querySelectorAll(".archiveBtn")[1]; //button for post
 let archiveBtn3 = document.querySelectorAll(".archiveBtn")[2]; //button for post 3
 let archiveBtn4 = document.querySelectorAll(".archiveBtn")[3]; //button for post 4
 let archiveBtn5 = document.querySelectorAll(".archiveBtn")[4]; //button for post 5
+
 
 let archiveBox1 = document.querySelectorAll(".archiveBox")[0];
 let archiveBox2 = document.querySelectorAll(".archiveBox")[1];
@@ -32,6 +32,7 @@ let aboutBox2 = document.querySelectorAll(".aboutBox")[1];
 let aboutBox3 = document.querySelectorAll(".aboutBox")[2];
 let aboutBox4 = document.querySelectorAll(".aboutBox")[3];
 let aboutBox5 = document.querySelectorAll(".aboutBox")[4];
+
 
 function showHideBox(box, button) {
     if(box.classList.contains('show')) {
@@ -82,7 +83,7 @@ function validateForm()
     if(document.create.blogPost.value == "")
     {
         alert("Please enter your blog post");
-        document.create.blodPost.focus();
+        document.create.blogPost.focus();
         return false;
     }
 }
@@ -122,6 +123,7 @@ function toggleTheme(){
     localStorage.setItem('checked', toggle.checked);
 }
 
+
 function isTrue(value){
     // convert string to boolean
     return value === 'true';
@@ -137,5 +139,6 @@ toggle.addEventListener("change", toggleTheme);
 function toTop() {
   document.documentElement.scrollTop = 0; // For Chrome, etc
 } 
+
 
 

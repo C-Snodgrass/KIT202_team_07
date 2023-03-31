@@ -15,122 +15,135 @@
 
     <head>
         <meta charset="UTF-8">
-        <!-- TODO add your names -->
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
-        <meta name="author" content="Chris Snodgrass">
-        <meta name="author" content="Fraser Miller">
+        <meta name="author" content="co-authored by Chris Snodgrass, Fraser Miller, and James Stansfield">
         <title>"Book Archive"</title>
     </head>
     
     <body class = "light">
         <div id="container">
+
             <div class = "header">
                 <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
                 <div class= "banner-text">
                     <h1>Book Blog</h1>
-                    <p>We are here to bolg about books</p>
+                    <p>We are here to blog about books</p>
                 </div>
             </div>
+
             <div class="topnav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a class = "active" href="archive.html">Archive</a>
+                <a class="active" href="#Archive">Archive</a>
                 <a href="create.html">Create</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <div class="toggle">
-                    <input type="checkbox" id="theme" class="toggle-input">
-                    <label for="theme" class="toggle-label">
-                        <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
-                    </label>
-                </div>
+                <a href="login.html">login</a>
+                <a href="register.html">register</a>
             </div>
 
-            </div>        <!-- lets put our nav bar here -->
-
             <div class = "archivedArticle">
-                <h2>post titles are h2</h2>
-                <p>date DD/MM/YY</p>
-                <p>key wrods, book, fantasy, whitty, feelgood, dark, ominous</p>
-                
+                <h2 class="postTitle">The Forgotten Book</h2>
+                <p class="postDate">Date: 14/11/21</p>
+                <p class="postKeywords">Keywords: ominous, dark, scary</p>
+                <p class="postAuthor">By Chris</p>
                 <button class="archiveBtn" id= "showHideBtn1">Show</button>
-                    <div class="archiveBox hide">
-                        <p id="showHideContent1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com-
-                            modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pari-atur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est labo-rum.
-                        </p>
-                    </div>
-                <p>author</p>
-            </div>
-            <div class = "archivedArticle">
-                <h2>A list of positives about reading</h2>
-                <p>date DD/MM/YY</p>
-                <p>key wrods, book, fantasy, whitty, feelgood, dark, ominous</p>
-                <button class="archiveBtn" id="showHideBtn2"> Show</button>
-                    <div class="archiveBox hide">
-                        <ul id="showHideContent2">
-                            <li>Lorem</li>
-                            <li>Ipsum</li>
-                            <li>Dolor</li>
-                        </ul>
-                    </div>
-            </div>
-            <div class = "archivedArticle">
-                <h2>Facinating</h2>
-                <p>date DD/MM/YY</p>
-                <p>key wrods, book, fantasy, whitty, feelgood, dark, ominous</p>
-                
-                <button class="archiveBtn" id="showHideBtn3"> Show</button>
+                <br><br>
                 <div class="archiveBox hide">
-                    <p id="showHideContent3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com-
-                        modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pari-atur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est labo-rum.
+                    <p id="showHideContent1">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system,
+                        and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, 
+                        because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there 
+                        anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him 
+                        some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any 
+                        right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? 
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, 
+                        so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness 
+                        of will, which is the same as saying through shrinking from toil and pain.
                     </p>
                 </div>
-                <p>author</p>
             </div>
             <div class = "archivedArticle">
-                <h2>Facinating</h2>
-                <p>date DD/MM/YY</p>
-                <p>key wrods, book, fantasy, whitty, feelgood, dark, ominous</p>
-                
+                <h2 class="postTitle">An Elusive Title</h2>
+                <p class="postDate">Date: 03/02/20</p>
+                <p class="postKeywords">Keywords: mystery, suspensful, hidden-gem</p>
+                <p class="postAuthor">By James</p>
+                <button class="archiveBtn" id= "showHideBtn2">Show</button>
+                <br><br>
+                <div class="archiveBox hide">
+                    <p>
+                        These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do 
+                        what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will 
+                        frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: 
+                        he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. Lorem Ipsum: variants and technical information Adobe Fireworks 
+                        Lorem Ipsum pluginIn 1985 Aldus Corporation launched its first desktop publishing program Aldus PageMaker for Apple Macintosh computers, released in 1987 for PCs running 
+                        Windows 1.0. Both contained the variant lorem ipsum most common today. Laura Perry, then art director with Aldus, modified prior versions of Lorem Ipsum text from 
+                        typographical specimens; in the 1960s and 1970s it appeared often in lettering catalogs by Letraset. Anecdotal evidence has it that Letraset used Lorem ipsum already 
+                        from 1970 onwards, eg. for grids (page layouts) for ad agencies. Many early desktop publishing programs, eg. Adobe PageMaker, used it to create template.
+                    </p>
+                </div>
+            </div>
+            <div class = "archivedArticle">
+                <h2 class="postTitle">Absolutely Stunning</h2>
+                <p class="postDate">Date: 29/12/19</p>
+                <p class="postKeywords">Keywords: perfect, consistent, world-building</p>
+                <p class="postAuthor">By Fraser</p>
+                <button class="archiveBtn" id="showHideBtn3"> Show</button>
+                <br><br>
+                <div class="archiveBox hide">
+                    <p id="showHideContent3">
+                        Most text editors like MS Word or Lotus Notes generate random lorem text when needed, either as pre-installed module or plug-in to be added.
+                        Word selection or sequence don't necessarily match the original, which is intended to add variety. Presentation software like Keynote or 
+                        Pages use it as a samples for screenplay layout. Content management software as Joomla, Drupal, Mambo, PHP-Nuke, WordPress, or Movable Type 
+                        offer Lorem Ipsum plug-ins with the same functionality. Lorem Ipsum: when, and when not to use itDo you like Cheese Whiz? Spray tan? Fake eyelashes? 
+                        That's what is Lorem Ipsum to many—it rubs them the wrong way, all the way. It's unreal, uncanny, makes you wonder if something is wrong, 
+                        it seems to seek your attention for all the wrong reasons. Usually, we prefer the real thing, wine without sulfur based preservatives, real butter, 
+                        not margarine, and so we'd like our layouts and designs to be filled with real words, with thoughts that count, information that has value. 
+                        The toppings you may chose for that TV dinner pizza slice when you forgot to shop for foods, the paint you may slap on your face to impress the new boss 
+                        is your business. But what about your daily bread? Design comps, layouts, wireframes
+                    </p>
+                </div>
+            </div>
+            <div class = "archivedArticle">
+                <h2 class="postTitle">Terrible Book</h2>
+                <p class="postDate">Date: 06/09/19</p>
+                <p class="postKeywords">Keywords: trash, do-not-read, pain</p>
+                <p class="postAuthor">By Fraser</p>
                 <button class="archiveBtn" id="showHideBtn4"> Show</button>
-                    <div class="archiveBox hide"> 
-                        <p id="showHideContent4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com-
-                            modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pari-atur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est labo-rum.
-                        </p>
-                    </div>
-                <p>author</p>
+                <br><br>
+                <div class="archiveBox hide"> 
+                    <p id="showHideContent4">
+                        will your clients accept that you go about things the facile way? Authorities in our business will tell in no uncertain terms that Lorem Ipsum is that 
+                        huge, huge no no to forswear forever. Not so fast, I'd say, there are some redeeming factors in favor of greeking text, as its use is merely the symptom 
+                        of a worse problem to take into consideration. You begin with a text, you sculpt information, you chisel away what's not needed, you come to the point, 
+                        make things clear, add value, you're a content person, you like words. Design is no afterthought, far from it, but it comes in a deserved second. Anyway, 
+                        you still use Lorem Ipsum and rightly so, as it will always have a place in the web workers toolbox, as things happen, not always the way you like it, 
+                        not always in the preferred order. Even if your less into design and more into content strategy you may find some redeeming value with, wait for it, dummy 
+                        copy, no less. Consider this: You made all the required mock ups for commissioned layout, got all the approvals, built a tested code base or had them built, 
+                        you decided on a content management system, got a license for it or adapted open source software for your client's needs. Then the question arises: where's 
+                        the content? Not there yet?
+                    </p>
+                </div>
             </div>
             <div class = "archivedArticle">
-                <h2>Facinating</h2>
-                <p>date DD/MM/YY</p>
-                <p>key wrods, book, fantasy, whitty, feelgood, dark, ominous</p>
-                
+                <h2 class="postTitle">Average Read</h2>
+                <p class="postDate">Date: 23/07/19</p>
+                <p class="PostKeywords">Keywords: average, generic, thriller</p>
+                <p class="postAuthor">By Chris</p>
                 <button class="archiveBtn" id="showHideBtn5"> Show</button>
-                    <div class="archiveBox hide">
-                        <p id="showHideContent5">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com-
-                            modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pari-atur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est labo-rum.
-                        </p>
-                    </div>
-                <p>author</p>
+                <br><br>
+                <div class="archiveBox hide">
+                    <p id="showHideContent5">
+                        That's not so bad, there's dummy copy to the rescue. But worse, what if the fish doesn't fit in the can, the foot's to big for the boot? Or to small? 
+                        To short sentences, to many headings, images too large for the proposed design, or too small, or they fit in but it looks iffy for reasons the folks 
+                        in the meeting can't quite tell right now, but they're unhappy, somehow. A client that's unhappy for a reason is a problem, a client that's unhappy 
+                        though he or her can't quite put a finger on it is worse. But. A big but: Lorem Ipsum is not t the root of the problem, it just shows what's going wrong. 
+                        Chances are there wasn't collaboration, communication, and checkpoints, there wasn't a process agreed upon or specified with the granularity required. 
+                        It's content strategy gone awry right from the start. Forswearing the use of Lorem Ipsum wouldn't have helped, won't help now. It's like saying you're a 
+                        bad designer, use less bold text, don't use italics in every other paragraph. True enough, but that's not all that it takes to get things back on track.                        
+                        So Lorem Ipsum is bad (not necessarily). There's lot of hate out there for a text that amounts to little more than garbled words in an old language.
+                    </p>
+                </div>
             </div>
-
             <footer>
                 <p>all content covered by creative commons zero (CC0) | the blog group</p>
             </footer>
