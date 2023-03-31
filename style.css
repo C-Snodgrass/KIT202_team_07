@@ -583,7 +583,7 @@ The box-sizing declaration controls how the browser calculates width and height 
 
 #register {
     text-decoration: none;
-    color: var(--fg);
+    color: black;
 }
 
 .login {
@@ -601,4 +601,6 @@ The box-sizing declaration controls how the browser calculates width and height 
     cursor: pointer;
 }
 
-
+#wrong_pass_alert {
+    text-align:center;
+}

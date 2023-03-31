@@ -88,57 +88,29 @@ function validateForm()
     }
     
 }
+    
 
-function validate_password() {
-
-    let pass = document.getElementByID('password').value;
+function validate_password(event) {
+    let pass = document.getElementById('password').value;
+    let confirm_pass = document.getElementById('confPassword').value;
     
-    let confirm_pass = document.getElementByID('confPassword').value;
     
-    if (password != confPassword) {
-    
-    document.getElementById('wrong_pass_alert').style.color = 'red';
-    
-    document.getElementById('wrong_pass_alert').innerHTML
-    
-    = '☒ Use same password';
-    
-    document.getElementById('create').disabled = true;
-    
-    document.getElementById('create').style.opacity = (0.4);
-    
+    if (pass != confirm_pass || pass == "" || confirm_pass == "") {
+        document.getElementById('wrong_pass_alert').style.color = 'red';
+        document.getElementById('wrong_pass_alert').innerHTML = '☒ Use same password';
+        document.getElementById('registerBtn').style.opacity = (0.4)
+        event.preventDefault();
     } else {
-    
-    document.getElementById('wrong_pass_alert').style.color = 'green';
-    
-    document.getElementById('wrong_pass_alert').innerHTML =
-    
-    '🗹 Password Matched';
-    
-    document.getElementById('create').disabled = false;
-    
-    document.getElementById('create').style.opacity = (1);
-    
+        document.getElementById('wrong_pass_alert').style.color = 'green';
+        document.getElementById('wrong_pass_alert').innerHTML = '🗹 Password Matched';
+        document.getElementById('registerBtn').style.opacity = (1);
     }
-    
-    }
-    
-    function wrong_pass_alert() {
-    
-    if (document.getElementById('password').value != "" &&
-    
-    document.getElementById('confPassword').value != "") {
-    
-    alert("Your response is submitted");
-    
-    } else {
-    
-    alert("Please fill all the fields");
-    
-    }
-    
     }
 
+    if (onRegister) {
+    let register = document.getElementById("registerBtn");
+    register.addEventListener("click", validate_password);
+    }
 // Dark them switcher
 const body= document.querySelector("body");
 const toggle = document.querySelector('.toggle-input');
