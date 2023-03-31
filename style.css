@@ -441,7 +441,7 @@ The box-sizing declaration controls how the browser calculates width and height 
 .archiveBtn {
     background-color: inherit;
     cursor: pointer;
-
+    color: var(--fg);
     border-color: var(--fg);
     border-radius: 8px;
     border-style: solid;
@@ -452,7 +452,6 @@ The box-sizing declaration controls how the browser calculates width and height 
 .aboutBtn {
     background-color: inherit;
     cursor: pointer;
-
     border-color: var(--blue);
     color: var(--blue);
     border-radius: 8px;
@@ -584,8 +583,22 @@ The box-sizing declaration controls how the browser calculates width and height 
 
 #register {
     text-decoration: none;
+    color: var(--fg);
 }
 
-#login {
+.login {
     text-decoration: none;
+    cursor: pointer;
 }
+
+.submit {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.reset {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
