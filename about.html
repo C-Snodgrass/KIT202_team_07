@@ -34,7 +34,16 @@
     </head>
     
     <body class = "light">
-        <div = "container">
+        <div id = "container">
+
+            <div class = "header">
+                <img src="images/wall_of_books_thin.jpg" class="header-img" alt="book_shelf"/>
+                <img src="images/Book BlogLOGO.png" class="banner-text"><img>
+                <div class= "banner-text">
+                    <!-- <h1>Book Blog</h1>
+                    <p>We are here to blog about books</p> -->
+                </div>
+            </div>
 
             <div class="topnav">
                 <a href = "index.html"> Home</a>
@@ -89,6 +98,8 @@
                             James and Chris had a brief discussion of favoured text edditor colour paletts. While neither of them
                             use the Gruvbox theme it was decided the middle of the road beige, and retro 70s esque color theme would
                             suit the bland toppic of books, books, books.
+
+                            The asthetic design was based around books and a library which seemed fitting given the subject matter was books.
                         </p>
                             
                         <h4>When choosing our site design, what considerations did we make?</h4>
@@ -97,6 +108,9 @@
                             easily legible, however we did not want to burn out the viewer's retteners. Was also aimed to keep the 
                             content centered so as the viewer did not have to chase the it around the screen. Similar pirincipals
                             to text edditing and code.
+
+                            We decided that the site design needed to be user friendly and intuitive.  That is it was obvious what info
+                            was required from the user and where.
                         </p>
                     </div>
                     <p>
@@ -105,12 +119,13 @@
                         <div class="aboutBox hide" id="aboutContent2" name="passwordPolicy">
                             <h4>How did our group implement our password policy?</h4>
                             <p>
-                                Did you impliment this Fraser
+                                Our password policy was designed to make the user login information as secure as possible but at the same time
+                                striking the balance between ease of use and security.  We decided on an alpha numeric password 6-12 characters long.
                             </p>
                                 
                             <h4>How did our group validate the password fields against this policy?</h4>
                             <p>
-                                This one you again Frasier
+                                The password had required sybmols and alpha numeric requirements which was validated using pattern matching in the password input type.
                             </p>
                         </div>
                     </p>
@@ -120,8 +135,7 @@
                         <div class="aboutBox hide" id="aboutContent3" name="newUserRegistration">
                             <h4>Why did our group opt to...?</h4>
                             <p> 
-                                filler text filler text filler text filler text filler text filler text filler text filler text filler text                                
-                                filler text filler text filler text filler text filler text filler text filler text filler text filler text
+                                We registered users on a new page for ease of use as well as making it easier to validate using JS
                             </p>
                         </div>
                     </p>
@@ -159,6 +173,8 @@
                                 too bright. The sticky nav bar ensured that content on other pages could be easily access no matter where
                                 the user found themseleves keeping content easiliy accessible. This same principal is why we added the 
                                 Top of the page link, however that was omitted from pages with insufficient content.
+
+                                We used the emblishments to aid the usability of the website as well as directing the user where their action was required.
                             </p>
                             <h4>How did our group implement these embelishments?</h4>
                             <p>
@@ -172,6 +188,9 @@
                                 <br>
                                 as is the top of the page link, if we want we should probably put it in a button?? 
                                 its simply a href which quals "#top", guess that's a reserved word.
+
+                                Our group implmented the emblishments by embedding them in the headers, titles and background.  We also used
+                                buttons and links aid in navigation and use of the page.
                             </p> 
                             <h4>Was our group faced with challenges implementing these embelishments? How did we overcome them?</h4>
                             <p>
@@ -180,6 +199,8 @@
 
                                 Working in a distributed maner was difficult, non of us being particularly adept with git. However
                                 with patience and teamwork we overcome the challanges
+
+                                The challenges of implmenting these emblishments was around formatting and ensuring the functionality worked as intended.
                             </p>
                         </div>
                     </p>
@@ -190,19 +211,20 @@
                             <h4>References:</h4>
                             <p>
                                 morhetz is the inventor of gruvbox ... https://github.com/morhetz/gruvbox
+                                <br>
                                 this css styling was pretty much a direct rip ...https://github.com/YV31/gruvbox-css
                                 svg https://heroicons.dev/
+                                <br>
                                 impliment dark mode https://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
                                 banner -- Photo by Pixabay from Pexels: https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/
-                                Great link 
                             </p>
                         </div>
                     </p>
                 </div>
-                <button onclick="toTop()" class="btn" title="to the top">Top</button>
-                <footer>
-                    <p>all content covered by creative commons zero (CC0) | the blog group</p>
-                </footer>
             </div>
+            <button onclick="toTop()" class="btn" title="to the top">Top</button>
+            <footer>
+                <p>all content covered by creative commons zero (CC0) | the blog group</p>
+            </footer>
         </div>
     </body>
