@@ -29,12 +29,12 @@
 
     <body class = "light">
         <div id="container">
-
             <div class = "header">
-                <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
+                <img src="images/wall_of_books_thin.jpg" class="header-img" alt="book_shelf"/>
+                <img src="images/Book BlogLOGO.png" class="banner-text"><img>
                 <div class= "banner-text">
-                    <h1>Book Blog</h1>
-                    <p>We are here to blog about books</p>
+                    <!-- <h1>Book Blog</h1> -->
+                    <!-- <p>We are here to blog about books</p> -->
                 </div>
             </div>
             
@@ -43,16 +43,15 @@
                 <a href="about.html">About</a>
                 <a href="archive.html">Archive</a>
                 <a href="create.html">Create</a>
-                <a href="login.html">login</a>
-                <a href="register.html">register</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <div class="toggle">
+                    <input type="checkbox" id="theme" class="toggle-input">
+                    <label for="theme" class="toggle-label">
+                        <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
+                    </label>
+                </div>
             </div>
-            <div class="toggle">
-                <input type="checkbox" id="theme" class="toggle-input">
-                <label for="theme" class="toggle-label">
-                    <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
-                </label>
-            </div>
-
             <div class = "blog-posts" >
             <!--need to turn this into a button?  -->
                 <div class = "article">
@@ -138,6 +137,7 @@
                     </div>
                 </div>
             </div>
+            <button onclick="toTop()" class="btn" title="to the top">Top</button>
             <footer>
                 <p>all content covered by creative commons zero (CC0) | the blog group</p>
             </footer>

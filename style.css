@@ -13,7 +13,6 @@
 /*     --beige: #EBDAB4; */
 /*     --dark-black: #282828; */
 /* } */
-
 /* this is chris playing around with the light and dark modes 
 *  there are too many colours at the moment, we can cull anything we don't use
 * */
@@ -90,15 +89,13 @@
 * body{ background-color: var(--background)}
 */
 
-/* theme toggle styling 
-*  
-*  ttps://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d
-* */
+/* theme toggle styling */
 
 .toggle {
   position: relative;
-  margin-bottom: 24px;
   user-select: none;
+  margin-top:7px;
+  margin-left:15px;
 }
 
 .toggle-input {
@@ -108,13 +105,13 @@
   opacity: 0;
   user-select: none;
 }
-
+/* is this needed? */
 .content:hover .toggle-icon {
   animation: wiggle 1s linear;
 }
 
 .toggle-icon {
-  width: 28px;
+  width: 10px;
   user-select: none;
 }
 
@@ -126,7 +123,7 @@
   border: 3px solid var(--green-dim);
   padding: 4px;
   border-radius: 50px;
-  width: 100px;
+  width: 20px;
   margin: 0 auto;
   background-color: var(--orange-dim);
   transition: all 0.3s ease;
@@ -171,7 +168,6 @@ body {
     padding:20px;
     margin: 10px;
     box-shadow: 5px 10px;
-
 }
 /*
 A 'wrapper' for all content
@@ -208,13 +204,12 @@ Define a CSS rule for the header image (a child of the .header element)
 - To ensure the image is sized appropriately, its width should be 100%
 - The border radius on the top-left and top-right corner is 10px
 */
-.header img {
+.header-img {
     height: 100%;
     width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     opacity: 0.5;
-
 }
 /*
 A rule for the heading element within the header.
@@ -238,10 +233,10 @@ A rule for the heading element within the header.
     color: var( --red);
 }
 
-.banner-text h1{
-    font-size:55px;
-    text-transform:uppercase;
-}
+/* .banner-text h1{ */
+/*     font-size:55px; */
+/*     text-transform:uppercase; */
+/* } */
 
 /* top navagation styling */
 .topnav {
@@ -298,10 +293,10 @@ The following guidelines apply:
     
 }
 
-.blog-posts h2{
+h2{
     margin-top:30px;
     margin-bottom:5px;
-    font-size:16px;
+    font-size:25px;
     font-weight:bold;
     text-transform:uppercase;
     color:var(--green);
@@ -344,24 +339,26 @@ The 'Cancel / Back' button should have:
 You may need to define additional CSS rules to style the button colours
 */
 .btn {
-    border:none;
+    border:2px dotted var(--bg2);
     padding:10px 15px;
-    color:white;
+    color:var(--yellow-dim);
+    background-color:var(--bg1);
     text-transform:uppercase;
     text-decoration:none;
     font-size: 15px;
+    cursor: pointer;
 }
-
+.btn:hover{
+    background-color:var(--green);
+}
 .btn#Register{
     background-color:#b01818;
 }
 .btn#Register:hover{
-    background-color:#c04141;
+    background-color:var(-- green);
 }
 
-.btn:hover{
-    background-color:#c04141;
-}
+
 
 
 .btn#Cancel{
@@ -401,10 +398,9 @@ The box-sizing declaration controls how the browser calculates width and height 
     margin-top:2px;
     margin-right:0px;
     width:200px;
-
-
     box-sizing: border-box;
 }
+
 
 .box {
     opacity: 0;
@@ -422,13 +418,15 @@ The box-sizing declaration controls how the browser calculates width and height 
     height: auto;
     width: auto;
     border: 2px;
+
     border-radius: 8px;
     border-color: var(--background-darker);
     border-style: solid;
     background-color: var(--bg);
     padding-left: 10px;
     padding-right: 10px;
-}
+
+}  
 
 .hide {
     opacity: 0;
@@ -443,23 +441,25 @@ The box-sizing declaration controls how the browser calculates width and height 
 .archiveBtn {
     background-color: inherit;
     cursor: pointer;
+
     border-color: var(--fg);
     border-radius: 8px;
     border-style: solid;
     float:right;
     vertical-align: middle;
-    
 }
 
 .aboutBtn {
     background-color: inherit;
     cursor: pointer;
+
     border-color: var(--blue);
     color: var(--blue);
     border-radius: 8px;
     border-style: solid;
     float:right;
     vertical-align: middle;
+
 }
 
 #archivedContent {
@@ -469,6 +469,13 @@ The box-sizing declaration controls how the browser calculates width and height 
     margin-right:15px;
 }
 
+
+#archivedContent footer {
+    font-size:11px;
+    text-decoration-color:#555555;
+    text-align: center;
+}
+
 #aboutContent {
     margin-top:20px;
     margin-bottom:20px;
@@ -476,6 +483,12 @@ The box-sizing declaration controls how the browser calculates width and height 
     margin-right:15px;
 }
 
+
+#aboutContent footer {
+    font-size:11px;
+    text-decoration-color:#555555;
+    text-align: center;
+}
 #aboutContent h2{
     margin-top: 30px;
     margin-bottom: 15px;
@@ -493,7 +506,6 @@ The box-sizing declaration controls how the browser calculates width and height 
     margin-bottom: 5px;
     margin-top: 5px;
     vertical-align: middle;
-    
 }
 
 #groupHeading{
@@ -512,11 +524,13 @@ The box-sizing declaration controls how the browser calculates width and height 
     font-weight:bold;
     text-transform:uppercase;
     color:var(--yellow-dim);
+
 }
 
 #studentNameId {
     font-size: 18px;
     color: var(--fg)
+
 }
 
 .studentName {
@@ -560,4 +574,18 @@ The box-sizing declaration controls how the browser calculates width and height 
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+}
+
+.article p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--gray);
+}
+
+#register {
+    text-decoration: none;
+}
+
+#login {
+    text-decoration: none;
 }

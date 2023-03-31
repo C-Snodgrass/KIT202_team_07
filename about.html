@@ -34,36 +34,43 @@
     </head>
     
     <body class = "light">
-        <div id="container">
+        <div id = "container">
 
             <div class = "header">
-                <img src="images/wall_of_books_thin.jpg" alt="book_shelf"/>
+                <img src="images/wall_of_books_thin.jpg" class="header-img" alt="book_shelf"/>
+                <img src="images/Book BlogLOGO.png" class="banner-text"><img>
                 <div class= "banner-text">
-                    <h1>Book Blog</h1>
-                    <p>We are here to blog about books</p>
+                    <!-- <h1>Book Blog</h1>
+                    <p>We are here to blog about books</p> -->
                 </div>
             </div>
 
             <div class="topnav">
-                <a href="index.html">Home</a>
+                <a href = "index.html"> Home</a>
                 <a class="active" href="#About">About</a>
                 <a href="archive.html">Archive</a>
                 <a href="create.html">Create</a>
-                <a href="login.html">login</a>
-                <a href="register.html">register</a>
-            </div>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <div class="toggle">
+                    <input type="checkbox" id="theme" class="toggle-input">
+                    <label for="theme" class="toggle-label">
+                        <img src="./images/svg/Moon.svg" alt="Dark mode" id="toggle-icon">
+                    </label>
+                </div>
+            </div> 
             <div id="aboutContent">
                 <h2> About Us </h2>
                 <h3 id="groupHeading"> Group 7 </h3>
                 <table id="studentNameId"> 
-                    <tr>
+                    <tr>                        
                         <td class="studentName">Chris Snodgrass</td>
-                        <td class="studentId">ID:</td>
+                        <td class="studentId">ID: 113255</td>
                     </tr>
                     <tr>
                         <td class="studentName">Fraser Miller</td>
-                        <td class="studentId">ID:</td>
-                    </tr>
+                        <td class="studentId">ID: 627526</td>
+                    </tr>                    
                     <tr>                        
                         <td class="studentName">James Stansfield</td>
                         <td class="studentId">ID: 556710</td>
@@ -72,27 +79,38 @@
                 <br>
 
                 <h4 id="groupAnswerHeading"> Group Answers: </h4>
-        
-                <div id="aboutPageAnswers">
+            
+                <div id="aboutPageAnswers">                    
                     <h3>The subject matter and theme</h3>
                     <button class="aboutBtn" id="aboutBtn1">Show</button>
                     <div class="aboutBox hide" id="aboutContent1" name="subjectMatter">
                         <h4>How did our group choose the subject matter and theme?</h4>
                         <p>
-                            Our group thought of a few idea for our subject matter and theme before we settled on a book blog.
-                            The reason for this is that, a book theme gives us lots of options and flexibilty on what we want
-                            to do, as we can be as narrow or as broad as we would like.
+                            Our group thought of a few ideas for our subject matter and theme before we settled on a book blog.
+                            The reason for this is that, a book theme gives us lots of options and flexibility on what we want
+                            to do, as we can be as narrow or as broad as we would like. Upon reflection it was found that books
+                            and they way they are stored are reflect the structure of a web page.
                         </p>
-                        
+                            
                         <h4>How did our group come up with the asthethic design?</h4>
                         <p>
-                            The asthetic design was based around books and a library which seemed fitting given the subject matter was books.
+
+                            James and Chris had a brief discussion of favored text editor colour palettes. While neither of them
+                            use the Gruvbox theme it was decided the middle of the road beige, and retro 70s esque color theme would
+                            suit the bland topic of books, books, books. The utilization of an established theme would ensure complimentary 
+                            colours. The layout was heavily influenced by the work we had done in our tutorials up until this point.
+
                         </p>
-                        
+                            
                         <h4>When choosing our site design, what considerations did we make?</h4>
                         <p>
-                            We decided that the site design needed to be user friendly and intuitive.  That is it was obvious what info
-                            was required from the user and where.
+
+                            Ease of readability was high on the list of priorities. We wanted the site to have enough contrast to be
+                            easily legible, however we did not want to burn out the viewer's retteners. Was also aimed to keep the 
+                            content centered so as the viewer did not have to chase it around the screen. Similar principals
+                            to text editing and code. The addition of "pop out boxes" or hidden content fed into the idea of having
+                            a lot of content directly in front of the user, density without overwhelming the viewer.
+
                         </p>
                     </div>
                     <p>
@@ -102,9 +120,13 @@
                             <h4>How did our group implement our password policy?</h4>
                             <p>
                                 Our password policy was designed to make the user login information as secure as possible but at the same time
-                                striking the balance between ease of use and security.  We decided on an alpha numeric password 6-12 characters long.
+
+                                striking the balance between ease of use and security.  We decided on an alpha numeric password 6-12 characters long,
+                                where at least one character must be capitalized, and another not, and include at least one digit. ... how was it 
+                                actually implimented? like break down the JS??
+
                             </p>
-                            
+                                
                             <h4>How did our group validate the password fields against this policy?</h4>
                             <p>
                                 The password had required sybmols and alpha numeric requirements which was validated using pattern matching in the password input type.
@@ -115,52 +137,93 @@
                         <h3>The handling of new users</h3>
                         <button class="aboutBtn" id="aboutBtn3">Show</button>
                         <div class="aboutBox hide" id="aboutContent3" name="newUserRegistration">
-                            <h4>Why did our group opt to register new users on a new page?</h4>
+
+                            <h4>Why did our group opt to register new users on a different page?</h4>
                             <p> 
-                                We registered users on a new page for ease of use as well as making it easier to validate using JS
+
+                                We registered users on a new page this was easier to implement. Moreover, it easily allows new users to quickly find the Register page from the navigator
+                                bar if they so wish, cutting wasted time for new users looking to register.
+
                             </p>
                         </div>
                     </p>
                     <p>
                         <h3>The various embelishments</h3>
                         <button class="aboutBtn" id="aboutBtn4">Show</button>
-                        <div class="aboutBox hide" id="aboutContent4" name="siteEmbelishments">
+                        <div class="aboutBox hide" id="aboutContent4" name="siteEmbelishments">                            
                             <h4>What embelishments did our group add?</h4>
                             <p>
-                                emblishment 1: We used text and background pictures
+
+                                Dark Theme: We added a dark theme to our website, which changes the colour scheme of elements from light to dark, which is much easier on the eyes in dark environments.
                             </p>
                             
                             <p>
-                                emblishment 2: We used alerts for to draw users attention to invalid data fields.
+                                Sticky nav bar: We stuck the nav bar to the top as the user scrolls down the page.
                             </p>
                             
                             <p>
-                                emblishment 3: We used buttons to make it easy for the user to understand what actions were required of them.
+                                Top of page link: We added a button on the bottom of the page that will take you to the top when clicked on.
+
                             </p>
-                            
+                                
                             <p>
-                                emblishment 4: We error correction to ensure data was entered and collected correctly
+
+                                Animations for showing/hiding content: We implemented animations for showing/hiding content.                            
+
+
                             </p>
-                            
+                                
                             <p>
-                                emblishment 5: We used secure password requirements to protect user privacy
+
+                                Rounded boxes for content: We created rounded boxes around our content that show/hide dynamically with the show/hide buttons.
+
                             </p>
-                            
+                                
                             <p>
-                                emblishment 6: We used seperate pages to aid in user navigation.
+
+                                Pop-up alert: For form validation we added pop-up alerts for the user.
+
                             </p>
-                            <h4>Why did our group add these embelishments, what was the purpose?</h4>
+
+                            <h4>Why did our group add these embellishments, what was the purpose?</h4>
                             <p>
-                                We used the emblishments to aid the usability of the website as well as directing the user where their action was required.
+
+                                It was decided that a dark mode would dovetail into our core consideration of legibility without being
+                                too bright. The sticky nav bar ensured that content on other pages could be easily access no matter where
+                                the user found them selves keeping content easily accessible. This same principal is why we added the 
+                                Top of the page link, however that was omitted from pages with insufficient content.
+
                             </p>
-                            <h4>How did our group implement these embelishments?</h4>
+                            <h4>How did our group implement these embellishments?</h4>
                             <p>
-                                Our group implmented the emblishments by embedding them in the headers, titles and background.  We also used
-                                buttons and links aid in navigation and use of the page.
-                            </p>
+
+
+                                dark mode... all colours are accessed through variable, these variables are held in two separate classes,
+                                one "light" the other "dark". These classes can be applied to the body. A checkbox (with a hidden box) 
+                                was made and event listener listens to see if the box is ticked if so the class is changed in the body
+                                and the SVG is changed in the logo / checkbox. 
+                                <br>
+                                Sticky bar is as simple as one line of css 
+                                <br>
+                                <code>position: sticky;</code>
+                                <br>
+                                the top of page link is a button, "on click" it calls a toTop function which cahnges scrollTop to 0
+                                <br>
+
+                                <!-- maybe say how you implimented the folding boxes here James -->
+
+                            </p> 
                             <h4>Was our group faced with challenges implementing these embelishments? How did we overcome them?</h4>
                             <p>
-                                The challenges of implmenting these emblishments was around formatting and ensuring the functionality worked as intended.
+                                Chris had a great deal of trouble implementing persistence with the dark mode, however with the aide
+                                of the internet and the console he was eventually consoled, when it worked. The method was to use
+                                the localStorage method, which can hold objects (in the user's browser?). this local storage held the
+                                state of the check box which could be check on page load... then the appropriate theme applied.
+                                <br>
+                                While not an embellishment it is of not that the largest challenge the team faced was working in an
+                                asynchrynos distributed manner. None of us being particularly adept with git. However with patience
+                                we managed to git there ("hahahah").
+
                             </p>
                         </div>
                     </p>
@@ -170,12 +233,21 @@
                         <div class="aboutBox hide" id="aboutContent5" name="referenceList">
                             <h4>References:</h4>
                             <p>
-                                Great link 
+                                morhetz is the inventor of gruvbox ... https://github.com/morhetz/gruvbox
+                                <br><br>
+                                this css styling was pretty much a direct rip ...https://github.com/YV31/gruvbox-css
+                                svg https://heroicons.dev/
+                                <br><br>
+                                implement dark mode https://bootcamp.uxdesign.cc/create-a-dark-mode-for-your-website-d62e73a4275d.
+                                <br><br>
+                                banner -- Photo by Pixabay from Pexels: https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/
                             </p>
                         </div>
                     </p>
                 </div>
             </div>
+            <button onclick="toTop()" class="btn" title="to the top">Top</button>
+
             <footer>
                 <p>all content covered by creative commons zero (CC0) | the blog group</p>
             </footer>
