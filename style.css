@@ -205,7 +205,7 @@ Define a CSS rule for the header image (a child of the .header element)
 - To ensure the image is sized appropriately, its width should be 100%
 - The border radius on the top-left and top-right corner is 10px
 */
-.header img {
+.header-img {
     height: 100%;
     width: 100%;
     border-top-right-radius: 10px;
@@ -235,10 +235,10 @@ A rule for the heading element within the header.
     color: var( --red);
 }
 
-.banner-text h1{
-    font-size:55px;
-    text-transform:uppercase;
-}
+/* .banner-text h1{ */
+/*     font-size:55px; */
+/*     text-transform:uppercase; */
+/* } */
 
 /* top navagation styling */
 .topnav {
