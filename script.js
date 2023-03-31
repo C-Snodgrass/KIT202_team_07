@@ -73,19 +73,20 @@ function validateForm()
         return false;
     }
 
-    if(document.create.tags.value == "")
+    else if(document.create.tags.value == "")
     {
         alert("Please enter a keyword or tag for your blog post");
         document.create.tags.focus();
         return false;
     }
    
-    if(document.create.blogPost.value == "")
+    else if(document.create.blogPost.value == "")
     {
         alert("Please enter your blog post");
         document.create.blogPost.focus();
         return false;
     }
+    
 }
 
 // Dark them switcher
@@ -139,6 +140,5 @@ toggle.addEventListener("change", toggleTheme);
 function toTop() {
   document.documentElement.scrollTop = 0; // For Chrome, etc
 } 
-
 
 
