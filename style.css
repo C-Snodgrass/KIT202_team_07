@@ -168,7 +168,6 @@ body {
     padding:20px;
     margin: 10px;
     box-shadow: 5px 10px;
-
 }
 /*
 A 'wrapper' for all content
@@ -211,7 +210,6 @@ Define a CSS rule for the header image (a child of the .header element)
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     opacity: 0.5;
-
 }
 /*
 A rule for the heading element within the header.
@@ -298,7 +296,7 @@ The following guidelines apply:
 .blog-posts h2{
     margin-top:30px;
     margin-bottom:5px;
-    font-size:16px;
+    font-size:30px;
     font-weight:bold;
     text-transform:uppercase;
     color:var(--green);
@@ -348,6 +346,7 @@ You may need to define additional CSS rules to style the button colours
     text-transform:uppercase;
     text-decoration:none;
     font-size: 15px;
+    cursor: pointer;
 }
 .btn:hover{
     background-color:var(--green);
@@ -579,3 +578,12 @@ The box-sizing declaration controls how the browser calculates width and height 
     text-align: left;
 }
 
+.article p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--gray);
+}
+
+#postTitle {
+
+}
