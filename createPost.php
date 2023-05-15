@@ -1,21 +1,50 @@
 <?php
-// Retrieve form data
-$title = $_POST['title'];
-$tags = $_POST['tags'];
-$content = $_POST['content'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $title = sanitize_input($_POST["title"]);
+  $tags = sanitize_input($_POST["tags"]);
+  $content = sanitize_input($_POST["content"]);
+  $image = sanitize_input($_FILES["image"]["name"]);
+  $targetDir = "uploads/";
+  $targetFile = $targetDir . basename($image);
 
-// Sanitize form data
-$title = mysqli_real_escape_string($conn, $title);
-$tags = mysqli_real_escape_string($conn, $tags);
-$content = mysqli_real_escape_string($conn, $content);
+  // Check if image file is a actual image or fake image
+  $check = getimagesize($_FILES["image"]["tmp_name"]);
+  if($check !== false) {
+    move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);
+  } else {
+    echo "File is not an image.";
+    exit;
+  }
 
-// Insert data into database
-$stmt = $conn->prepare("INSERT INTO posts (title, tags, content, post_date) VALUES (?, ?, ?, NOW())");
-$stmt->bind_param("sss", $title, $tags, $content);
-$stmt->execute();
-$stmt->close();
+  // Connect to the database
+  $servername = "localhost";
+  $username = "dean3";
+  $password = "6bff6d210e30";
+  $dbname = "dean3";
 
-// Redirect to confirmation page
-header("Location: confirmation.php");
-exit();
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  // Insert the blog post into the database
+  $sql = "INSERT INTO blog_posts (title, tags, content, image) VALUES ('$title', '$tags', '$content', '$image')";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "Blog post submitted successfully!";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+
+  $conn->close();
+}
+
+function sanitize_input($input) {
+  $input = trim($input);
+  $input = stripslashes($input);
+  $input = htmlspecialchars($input);
+  return $input;
+}
 ?>

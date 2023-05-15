@@ -64,7 +64,7 @@ if (onArchive) {
 }
 
 // form validation for create page
-function validateForm()
+/* function validateForm()
 {
     if(document.create.title == "" || document.create.title.value.length >70)
     {
@@ -87,7 +87,40 @@ function validateForm()
         return false;
     }
     
+} */
+
+function validateForm() {
+    var title = document.create.title;
+    var tags = document.create.tags;
+    var blogPost = document.create.blogPost;
+    var image = document.create.image;
+  
+    if (title.value == "" || title.value.length > 70) {
+      title.setCustomValidity("Please enter a valid Title for your blog");
+      title.reportValidity();
+      return false;
+    }
+  
+    if (tags.value == "") {
+      tags.setCustomValidity("Please enter a keyword or tag for your blog post");
+      tags.reportValidity();
+      return false;
+    }
+  
+    if (blogPost.value == "") {
+      blogPost.setCustomValidity("Please enter your blog post");
+      blogPost.reportValidity();
+      return false;
+    }
+  
+    if (image.value != "") {
+      var imagePath = "<img src='" + image.value + "'>";
+      blogPost.value += imagePath;
+    }
+  
+    return true;
 }
+  
     
 
 function validate_password(event) {
