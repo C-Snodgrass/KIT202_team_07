@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $title = sanitize_input($_POST["title"]);
-  $tags = sanitize_input($_POST["tags"]);
+  $tags = implode(",", $_POST["tags"]);
   $content = sanitize_input($_POST["content"]);
   $image = sanitize_input($_FILES["image"]["name"]);
   $targetDir = "uploads/";
@@ -15,6 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "File is not an image.";
     exit;
   }
+
+  // Get the current date and time
+  $post_date = date("Y-m-d H:i:s");
 
   // Connect to the database
   $servername = "localhost";
@@ -30,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Insert the blog post into the database
-  $sql = "INSERT INTO blog_posts (title, tags, content, image) VALUES ('$title', '$tags', '$content', '$image')";
+  $sql = "INSERT blog_posts (title, tags, content, image, post_date) VALUES ('$title', '$tags', '$content', '$image', '$post_date')";
 
   if ($conn->query($sql) === TRUE) {
     echo "Blog post submitted successfully!";
