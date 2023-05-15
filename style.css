@@ -604,3 +604,25 @@ The box-sizing declaration controls how the browser calculates width and height 
 #wrong_pass_alert {
     text-align:center;
 }
+
+.contentBox {
+    position: relative;
+}
+
+.submitButton {
+    background-color: #48ce4f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resetButton {
+    background-color: #c95151;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
