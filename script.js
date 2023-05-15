@@ -192,4 +192,8 @@ function toTop() {
   document.documentElement.scrollTop = 0; // For Chrome, etc
 } 
 
-
+var content = document.getElementById("content");
+content.addEventListener("input", function() {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+});
