@@ -39,7 +39,7 @@ in VS Code hit (Ctrl+Shift+V) to open a new window which will render this file
 ### blog_tags 
 | Column Name | Data Type | size | Description |
 | --- | --- | --- | --- |
-| blogID (FK) | INT | Foreign key | BlogID, from blog table |
-| tagId INTEGER (FK) | INT | Foreign Key | tagID, from tags table |
+| blogID (FK)(PK) | INT | Foreign key | BlogID, from blog table |
+| tagId INTEGER (FK)(PK) | INT | Foreign Key | tagID, from tags table |
 
 ---
