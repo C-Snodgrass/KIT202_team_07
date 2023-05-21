@@ -38,6 +38,7 @@ as each tag name will be unique maybe the name can be the PK?
 | firstName | VARCHAR | 50 characters | user first name |
 | lastName | VARCHAR |  50 characters | user last name |
 | role | VARCHAR | 10 character | "author" "admin" "member" "guest", guest is defult, not logged in |
+| email | VARCHAR | 255 characters | email address of user |
 
 ---
 
